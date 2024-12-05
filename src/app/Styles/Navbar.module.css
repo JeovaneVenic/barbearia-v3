@@ -1,0 +1,56 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(44, 62, 80, 0.5); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    padding: 10px 20px;
+  }
+  
+  .logo .logoImagem {
+    height: 40px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+  }
+  
+  .menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00FF00; /* Substitua #00FF00 pelo código hexadecimal da cor verde do logo */
+    transition: width 0.3s ease;
+  }
+  
+  .menu li a:hover::after {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00FF00; /* Substitua #00FF00 pelo código hexadecimal da cor verde do logo */
+  }
+  
+  .contato button {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  
