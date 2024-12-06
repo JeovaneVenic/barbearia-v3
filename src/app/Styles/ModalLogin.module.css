@@ -1,0 +1,118 @@
+/* Classe para aplicar o efeito de desfoque no fundo */
+.blur {
+  filter: blur(5px);
+}
+
+/* Estilo para o fundo do modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Estilo para o conteúdo do modal */
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative; /* Necessário para posicionar o botão de fechar */
+}
+
+.modalContent h2 {
+  margin-bottom: 20px;
+}
+
+.modalContent form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalContent form label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.modalContent form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilo para a seção "Lembrar de mim" */
+.rememberMeContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rememberMeContainer input {
+  margin-right: 5px;
+}
+
+/* Estilo para o botão de login/cadastro */
+.loginButton {
+  background-color: #0fac5d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background: linear-gradient(90deg, #21E07F, #21E07F);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* Estilo para a seção "Esqueceu a senha?" */
+.forgotPassword {
+  margin-top: 10px;
+}
+
+.forgotPassword a {
+  color: #0fac5d;
+}
+
+/* Estilo para a seção "Não está registrado?" */
+.notRegistered {
+  margin-top: 20px;
+}
+
+.notRegistered a {
+  color: #0fac5d;
+}
+
+/* Estilo para links que alternam entre modal de login/cadastro */
+.switchModalLink {
+  background: none;
+  border: none;
+  color: #0fac5d;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* Estilo para o botão de fechar */
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

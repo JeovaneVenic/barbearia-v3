@@ -10,7 +10,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1; 
@@ -82,7 +82,7 @@
   justify-content: flex-end; 
 }
 
-.contato button {
+.contato button, .botaoEntrar {
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -96,7 +96,7 @@
   z-index: 0;
 }
 
-.contato button::before {
+.contato button::before, .botaoEntrar::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -110,17 +110,16 @@
   border-radius: 50%;
 }
 
-.contato button:hover::before {
+.contato button:hover::before, .botaoEntrar:hover::before {
   width: 300%;
   height: 300%;
 }
 
-.contato button:hover {
+.contato button:hover, .botaoEntrar:hover {
   color: white; 
   z-index: 1; 
   text-decoration: underline; 
 }
-
 
 @media (max-width: 768px) {
   .navbar {
