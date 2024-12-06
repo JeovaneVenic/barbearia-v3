@@ -13,37 +13,53 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .navbar {
   display: flex;
-  justify-content: center; 
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(44, 62, 80, 0.5); 
-  backdrop-filter: blur(10px); 
-  padding: 10px 20px;
-  position: fixed; 
+  background-color: rgba(44, 62, 80, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 5px 20px;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; 
+  z-index: 10;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .logo {
-  flex: 1; 
+  display: flex;
+  align-items: center;
 }
 
 .logoImagem {
-  height: 40px;
+  height: 30px;
+}
+
+.menuContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .menu {
   list-style: none;
   display: flex;
   gap: 20px;
-  justify-content: center; 
-  flex: 2; 
+  align-items: center;
+  margin: 0;
 }
 
 .menu li {
@@ -53,7 +69,8 @@
 .menu li a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 30px;
 }
 
 .menu li a::after {
@@ -65,7 +82,7 @@
   margin-top: 5px;
   left: 50%;
   transform: translateX(-50%);
-  background: #00FF00; 
+  background: #00FF00;
   transition: width 0.3s ease;
 }
 
@@ -73,22 +90,26 @@
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #00FF00; 
+  background: #00FF00;
+}
+
+.contatoContainer {
+  display: flex;
+  align-items: center;
 }
 
 .contato {
-  flex: 1; 
   display: flex;
-  justify-content: flex-end; 
+  align-items: center;
 }
 
-.contato button, .botaoEntrar {
+.botaoContato {
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 4px;
   position: relative;
   overflow: hidden;
@@ -96,54 +117,71 @@
   z-index: 0;
 }
 
-.contato button::before, .botaoEntrar::before {
+.botaoContato::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(72, 207, 113, 0.8); 
+  background: rgba(72, 207, 113, 0.8);
   transform: translate(-50%, -50%);
   transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-  z-index: -1; 
+  z-index: -1;
   border-radius: 50%;
 }
 
-.contato button:hover::before, .botaoEntrar:hover::before {
+.botaoContato:hover::before {
   width: 300%;
   height: 300%;
 }
 
-.contato button:hover, .botaoEntrar:hover {
-  color: white; 
-  z-index: 1; 
-  text-decoration: underline; 
+.botaoContato:hover {
+  color: white;
+  z-index: 1;
+  text-decoration: underline;
+}
+
+.menuBtn {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menuBtn span {
+  height: 2px;
+  width: 25px;
+  background: white;
+  margin: 4px;
+  transition: 0.3s;
 }
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    padding: 10px;
+    justify-content: space-between;
   }
 
-  .menu {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+  .menuContainer {
+    display: none;
   }
 
   .contato {
-    margin-top: 10px;
-    justify-content: center; /* Centraliza o botão de contato em dispositivos móveis */
+    display: none;
   }
 
-  .menu li a {
-    font-size: 14px;
+  .menuBtnContainer {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
   }
 
-  .contato button {
-    padding: 8px 16px;
-    font-size: 14px;
+  .menuBtn {
+    display: flex;
+  }
+
+  .logoContainer {
+    flex: none;
+    justify-content: flex-start;
   }
 }
