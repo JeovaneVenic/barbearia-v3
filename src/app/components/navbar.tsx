@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
           <Link href="/cortes">Cortes</Link>
         </li>
         <li>
-          <Link href="/">Início</Link> 
+          <Link href="/">Início</Link>
         </li>
         <li>
           <Link href="/sobre">Sobre</Link>
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         </li>
       </ul>
       <div className={estilos.contato}>
-        <button>Entrar / Cadastre-se</button>
+        <button className={estilos.botaoContato}>Entrar / Cadastre-se</button>
       </div>
     </nav>
   );

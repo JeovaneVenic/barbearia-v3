@@ -1,56 +1,150 @@
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 1; 
+}
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(44, 62, 80, 0.5); /* Fundo semi-transparente */
-    backdrop-filter: blur(10px); /* Efeito de desfoque */
-    padding: 10px 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: rgba(44, 62, 80, 0.5); 
+  backdrop-filter: blur(10px); 
+  padding: 10px 20px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; 
+}
+
+.logo {
+  flex: 1; 
+}
+
+.logoImagem {
+  height: 40px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center; 
+  flex: 2; 
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00FF00; 
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00FF00; 
+}
+
+.contato {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.contato button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.contato button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(72, 207, 113, 0.8); 
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  z-index: -1; 
+  border-radius: 50%;
+}
+
+.contato button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.contato button:hover {
+  color: white; 
+  z-index: 1; 
+  text-decoration: underline; 
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
   }
-  
-  .logo .logoImagem {
-    height: 40px;
-  }
-  
+
   .menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
-  
+
+  .contato {
+    margin-top: 10px;
+    justify-content: center; /* Centraliza o botão de contato em dispositivos móveis */
+  }
+
   .menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    position: relative;
+    font-size: 14px;
   }
-  
-  .menu li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    display: block;
-    margin-top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #00FF00; /* Substitua #00FF00 pelo código hexadecimal da cor verde do logo */
-    transition: width 0.3s ease;
-  }
-  
-  .menu li a:hover::after {
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #00FF00; /* Substitua #00FF00 pelo código hexadecimal da cor verde do logo */
-  }
-  
+
   .contato button {
-    background-color: #666;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
   }
-  
+}
