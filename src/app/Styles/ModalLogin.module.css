@@ -1,113 +1,148 @@
-/* Classe para aplicar o efeito de desfoque no fundo */
-.blur {
-  filter: blur(5px);
+/* Importando a fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #0fac5d; /* Cor principal (verde) */
+  --secondary-color: #007bff; /* Cor secundária (azul) */
+  --background-color: #f7f8fc; /* Cor de fundo */
+  --text-color: #fff; /* Cor do texto */
+  --input-background: rgba(255, 255, 255, 0.1); /* Fundo dos inputs */
+  --modal-background: rgba(44, 62, 80, 0.85); /* Fundo do modal */
+  --overlay-background: rgba(0, 0, 0, 0.7); /* Fundo da sobreposição */
+  --hover-color: #21E07F; /* Cor ao passar o mouse */
 }
 
-/* Estilo para o fundo do modal */
-.modalOverlay {
+/* Sobreposição que cobre a tela */
+.sobreposicaoModal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--overlay-background);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
 }
 
-/* Estilo para o conteúdo do modal */
-.modalContent {
-  background: white;
-  padding: 20px;
+/* Estilo do modal */
+.conteudoModal {
+  background: var(--modal-background);
+  padding: 30px;
   border-radius: 8px;
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  position: relative; /* Necessário para posicionar o botão de fechar */
+  position: relative;
+  backdrop-filter: blur(10px);
 }
 
-.modalContent h2 {
+/* Logo do modal */
+.logoModal {
+  width: 40px;
+  margin: -20px auto 10px;
+}
+
+/* Título do modal */
+.tituloModal {
   margin-bottom: 20px;
+  color: #f7f8fc;
 }
 
-.modalContent form {
+/* Formulário no modal */
+.conteudoModal form {
   display: flex;
   flex-direction: column;
 }
 
-.modalContent form label {
+/* Estilo dos rótulos dos inputs */
+.conteudoModal form label {
   text-align: left;
   margin-bottom: 5px;
+  color: var(--text-color);
+  
 }
 
-.modalContent form input {
+/* Campos de entrada */
+.conteudoModal form input {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background: var(--input-background);
+  color: var(--text-color);
 }
 
-/* Estilo para a seção "Lembrar de mim" */
-.rememberMeContainer {
+/* Checkbox "Lembrar login" */
+.containerLembrar {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  color: var(--text-color);
 }
 
-.rememberMeContainer input {
+.containerLembrar input {
   margin-right: 5px;
 }
 
-/* Estilo para o botão de login/cadastro */
-.loginButton {
-  background-color: #0fac5d;
+/* Botão "Entrar" */
+.botaoEntrar {
+  background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 10px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.loginButton:hover {
-  background: linear-gradient(90deg, #21E07F, #21E07F);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
-  text-decoration: underline;
+.botaoEntrar:hover {
+  background-color: var(--hover-color);
 }
 
-/* Estilo para a seção "Esqueceu a senha?" */
-.forgotPassword {
+/* Botão para "Esqueceu a senha?" */
+.esqueceuSenha {
   margin-top: 10px;
 }
 
-.forgotPassword a {
-  color: #0fac5d;
-}
-
-/* Estilo para a seção "Não está registrado?" */
-.notRegistered {
-  margin-top: 20px;
-}
-
-.notRegistered a {
-  color: #0fac5d;
-}
-
-/* Estilo para links que alternam entre modal de login/cadastro */
-.switchModalLink {
+.esqueceuSenha button {
   background: none;
   border: none;
-  color: #0fac5d;
+  color: var(--primary-color);
   cursor: pointer;
   text-decoration: underline;
   padding: 0;
 }
 
-/* Estilo para o botão de fechar */
-.closeButton {
+/* Texto para novos usuários */
+.naoRegistrado {
+  margin-top: 20px;
+  color: var(--text-color);
+}
+
+.naoRegistrado button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* Links para alternar seções no modal */
+.linkTrocaModal {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* Botão de fechar o modal */
+.botaoFechar {
   background: none;
   border: none;
   font-size: 24px;
@@ -115,4 +150,33 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Botão de envio */
+.botaoEnviar {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Mensagens de feedback ou alerta */
+.mensagem {
+  margin-top: 15px;
+  color: var(--text-color);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Subtítulo do modal (small) */
+.subtituloModal {
+  color: var(--text-color);
+  margin-top: -15px; 
+  margin-bottom: 5 ;
+  font-size: 0.9em;
+  display: block;
 }

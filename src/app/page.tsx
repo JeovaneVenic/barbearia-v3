@@ -5,9 +5,9 @@ const HomePage: React.FC = () => {
   return (
     <div className={styles.containerRolagem}>
       <div className={styles.containerImagem}>
-        <img src="01.jpg" alt="Barbearia" className={styles.imagemPrincipal} />
+        <img src="images/01.jpg" alt="Barbearia" className={styles.imagemPrincipal} />
         <div className={styles.containerLogo}>
-          <img src="/logo.png" alt="Logo" className={styles.logo} />
+          <img src="images/logo.png" alt="Logo" className={styles.logo} />
         </div>
         <div className={styles.textoCentralizado}>
           <div className={styles.textoPrincipal}>BARBEARIA DO SIRI</div>
@@ -18,24 +18,24 @@ const HomePage: React.FC = () => {
       </div>
       <div className={styles.novaTela}>
         <h2 className={styles.tituloImagem}>Conheça os nossos serviços</h2>
-        <img src="/36.png" alt="Imagem 36" className={styles.imagem} />
+        <img src="images/36.png" alt="Imagem 36" className={styles.imagem} />
         <div className={styles.containerQuadrados}>
           <div className={styles.containerItem}>
-            <img src="/cortes.png" alt="Cortes" className={styles.imagemQuadrado} />
+            <img src="images/cortes.png" alt="Cortes" className={styles.imagemQuadrado} />
             <h3 className={styles.nome}>CORTES</h3>
             <div className={styles.quadrado}>
               <p className={styles.textoQuadrado}>Cortes que combinam estilo e personalidade, do clássico ao moderno!</p>
             </div>
           </div>
           <div className={styles.containerItem}>
-            <img src="/barba.png" alt="Barba" className={styles.imagemQuadrado} />
+            <img src="images/barba.png" alt="Barba" className={styles.imagemQuadrado} />
             <h3 className={styles.nome}>BARBA</h3>
             <div className={styles.quadrado}>
               <p className={styles.textoQuadrado}>Aparo e modelagem para uma barba impecável.</p>
             </div>
           </div>
           <div className={styles.containerItem}>
-            <img src="/tratamento.png" alt="Tratamento Capilar" className={styles.imagemQuadrado} />
+            <img src="images/tratamento.png" alt="Tratamento Capilar" className={styles.imagemQuadrado} />
             <h3 className={styles.nome}>TRATAMENTO CAPILAR</h3>
             <div className={styles.quadrado}>
               <p className={styles.textoQuadrado}>Hidratação e cuidados especiais para um cabelo saudável.</p>

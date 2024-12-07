@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import ModalLogin from '../components/ModalLogin/ModalLogin'; // Certifique-se de ajustar o caminho conforme necessário
+import ModalLogin from '../components/ModalLogin/ModalLogin'; 
 import estilos from '../Styles/Navbar.module.css';
-import BarraDeNavegacaoMobile from '../components/NavbarMobile'; // Certifique-se de que o caminho está correto
+import BarraDeNavegacaoMobile from '../components/NavbarMobile'; 
 
 const BarraDeNavegacao: React.FC = () => {
   const [modalAberto, setModalAberto] = useState(false);
@@ -24,7 +24,7 @@ const BarraDeNavegacao: React.FC = () => {
         <div className={estilos.logoContainer}>
           <Link href="/" passHref>
             <div className={estilos.logo}>
-              <img src="/logo.png" alt="Logo" className={estilos.logoImagem} />
+              <img src="images/logo.png" alt="Logo" className={estilos.logoImagem} />
             </div>
           </Link>
         </div>
@@ -50,7 +50,7 @@ const BarraDeNavegacao: React.FC = () => {
         <div className={estilos.contatoContainer}>
           <div className={estilos.contato}>
             <button className={estilos.botaoContato} onClick={abrirModal}>
-              Entrar / Cadastre-se
+              Entrar
             </button>
           </div>
           <div className={estilos.menuBtn} onClick={alternarMenuMobile}>
