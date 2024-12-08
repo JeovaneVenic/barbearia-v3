@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+  color: white; 
+}
+
 .containerRolagem {
   height: 100vh;
   overflow-y: auto;
@@ -76,7 +81,7 @@
   padding: 10px 15px;
   font-size: 1em;
   color: white;
-  background-color: #4CAF50;
+  background-color: #4c78af;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -84,9 +89,9 @@
 }
 
 .botao:hover {
-  background-color: #45a049;
+  background-color: #0099ff;
   text-decoration: none;
-  box-shadow: 0 0 10px #45a049, 0 0 20px #45a049, 0 0 30px #45a049;
+  box-shadow: 0 0 10px #457aa0, 0 0 20px #4574a0, 0 0 30px #4580a0;
 }
 
 .extraContent {

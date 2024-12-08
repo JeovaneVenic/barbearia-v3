@@ -44,8 +44,7 @@ const ModalLogin: React.FC<ModalLoginProps> = ({
     users.push({ username, email, password });
     localStorage.setItem('users', JSON.stringify(users));
     setMensagem('Usuário cadastrado com sucesso!');
-    onClose();
-    window.location.reload();  // Recarrega a página após o cadastro
+    onClose(); 
   };
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
@@ -54,7 +53,7 @@ const ModalLogin: React.FC<ModalLoginProps> = ({
     const user = users.find((u: any) => u.username === username && u.password === password);
     if (user) {
       setMensagem('Login bem-sucedido!');
-      onClose(); 
+      onClose(); if(1 == 1)
       alert('Seja bem-vindo!');
     } else {
       setMensagem('Nome de usuário ou senha incorretos.');
@@ -74,7 +73,7 @@ const ModalLogin: React.FC<ModalLoginProps> = ({
         {emRecuperacao ? (
           <>
             <h2 className={estilos.tituloModal}>Recuperar Senha</h2>
-            <form>
+            <form onSubmit={enviarFormulario}>
               <label htmlFor="email">E-mail</label>
               <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
               <button type="submit" className={estilos.botaoEntrar}>Enviar</button>
