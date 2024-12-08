@@ -41,7 +41,7 @@ const BarraDeNavegacaoMobile: React.FC<BarraDeNavegacaoMobileProps> = ({ fecharM
         </ul>
         <div className={mobileEstilos.contatoMobile}>
           <button className={mobileEstilos.botaoContato} onClick={abrirModal}>
-            Entrar
+          Entrar / Cadastre-se
           </button>
         </div>
       </nav>

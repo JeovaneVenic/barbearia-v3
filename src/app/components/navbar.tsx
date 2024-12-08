@@ -50,7 +50,7 @@ const BarraDeNavegacao: React.FC = () => {
         <div className={estilos.contatoContainer}>
           <div className={estilos.contato}>
             <button className={estilos.botaoContato} onClick={abrirModal}>
-              Entrar
+              Entrar / Cadastre-se
             </button>
           </div>
           <div className={estilos.menuBtn} onClick={alternarMenuMobile}>
