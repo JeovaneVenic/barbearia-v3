@@ -9,6 +9,8 @@ body {
   overflow: visible;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* esconde scroll */
+  position: relative;
 }
 
 .containerImagem {
