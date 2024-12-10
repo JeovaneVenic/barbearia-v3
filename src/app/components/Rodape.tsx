@@ -10,7 +10,7 @@ const Rodape: React.FC = () => {
         &copy; 2024 MonkeyBits, Todos os direitos reservados.
       </p>
       <p className={styles.texto}>
-        VenicCode é uma marca registrada e marca de serviço da VenicCode.
+        MonkeyBits é uma marca registrada e marca de serviço da VenicCode.
       </p>
     </footer>
   );

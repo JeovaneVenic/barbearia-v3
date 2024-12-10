@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./Styles/globals.css";
 import Navbar from "./components/navbar";
-import Rodape from "./components/Rodape"; // Importação do novo componente Rodape
+import Rodape from "./components/Rodape"; 
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +32,7 @@ export default function RootLayout({
         <div className="page">
           {children}
         </div>
-        <Rodape /> {/* Adicionando o Rodape aqui */}
+        <Rodape /> 
       </body>
     </html>
   );

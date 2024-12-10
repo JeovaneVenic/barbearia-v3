@@ -1,9 +1,10 @@
 body {
-  background-color: black;
+  background-color: black; 
   color: white; 
 }
 
 .containerRolagem {
+  background-color: black; 
   height: auto;
   overflow: visible;
   display: flex;
@@ -15,7 +16,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  padding-top: 0; /* Removendo o padding-top da primeira imagem */
+  padding-top: 0; 
 }
 
 .imagemPrincipal {
@@ -23,7 +24,7 @@ body {
   height: 100%;
   object-fit: cover;
   position: absolute;
-  top: 0; /* Removendo o ajuste do topo */
+  top: 0;
   left: 0;
   z-index: 1;
 }
@@ -84,7 +85,7 @@ body {
   padding: 10px 15px;
   font-size: 1em;
   color: white;
-  background-color: #4c78af;
+  background-color: #4CAF50;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -92,9 +93,9 @@ body {
 }
 
 .botao:hover {
-  background-color: #0099ff;
+  background-color: #45a049;
   text-decoration: none;
-  box-shadow: 0 0 10px #457aa0, 0 0 20px #4574a0, 0 0 30px #4580a0;
+  box-shadow: 0 0 10px #45a049, 0 0 20px #45a049, 0 0 30px #45a049;
 }
 
 .novaTela {
@@ -108,11 +109,12 @@ body {
 
 .tituloImagem {
   position: absolute;
-  top: 130px; 
+  top: 200px;
   width: 100%;
   text-align: center;
   color: white;
   z-index: 2;
+  font-size: 2.25em;
 }
 
 .imagem {
@@ -237,8 +239,8 @@ body {
   }
 
   .tituloImagem {
-    top: 90px; 
-    font-size: 0.9em;
+    top: 220px; 
+    font-size: 1.5em; 
   }
 
   .informacoesMobile {

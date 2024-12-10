@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import ModalLogin from '../components/ModalLogin/ModalLogin'; 
-import estilos from '../Styles/Navbar.module.css';
-import BarraDeNavegacaoMobile from '../components/NavbarMobile'; 
+import React, { useState } from "react";
+import Link from "next/link";
+import ModalLogin from "../components/ModalLogin/ModalLogin";
+import estilos from "../Styles/Navbar.module.css";
+import BarraDeNavegacaoMobile from "../components/NavbarMobile";
 
 const BarraDeNavegacao: React.FC = () => {
   const [modalAberto, setModalAberto] = useState(false);
@@ -40,7 +40,7 @@ const BarraDeNavegacao: React.FC = () => {
               <Link href="/">Início</Link>
             </li>
             <li>
-              <Link href="/sobre">Sobre</Link>
+              <Link href="/sobre">Sobre</Link> {/* Caminho correto */}
             </li>
             <li>
               <Link href="/localizacao">Localização</Link>
@@ -61,11 +61,13 @@ const BarraDeNavegacao: React.FC = () => {
         </div>
       </nav>
 
-      {menuMobileAberto && <BarraDeNavegacaoMobile fecharMenuMobile={fecharMenuMobile} />}
-      
-      <ModalLogin 
-        isOpen={modalAberto} 
-        onClose={fecharModal} 
+      {menuMobileAberto && (
+        <BarraDeNavegacaoMobile fecharMenuMobile={fecharMenuMobile} />
+      )}
+
+      <ModalLogin
+        isOpen={modalAberto}
+        onClose={fecharModal}
         isCadastro={mostrarCadastro}
         switchToCadastro={mostrarTelaCadastro}
         switchToLogin={mostrarTelaLogin}

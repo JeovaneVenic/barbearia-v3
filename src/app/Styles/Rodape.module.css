@@ -1,21 +1,20 @@
 .rodape {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: #1a1a1a; /* Ajuste conforme necessário */
-    color: #fff;
-    width: 100%;
-    margin-top: auto; /* Garante que o rodapé fique colado ao fundo */
-  }
-  
-  .logo {
-    margin-bottom: 10px;
-  }
-  
-  .texto {
-    font-size: 14px; /* Ajuste conforme necessário */
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1a1a1a; /* Ajuste conforme necessário */
+  color: #fff;
+  width: 100%;
+  margin-top: auto; /* Garante que o rodapé fique colado ao fundo */
+}
+
+.logo {
+  margin-bottom: 10px;
+}
+
+.texto {
+  font-size: 14px; /* Ajuste conforme necessário */
+  text-align: center;
+}

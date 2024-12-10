@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
         </div>
       </div>
       <div className={styles.novaTela}>
-        <h2 className={styles.tituloImagem}>Conheça os nossos serviços</h2>
+        <h2 className={styles.tituloImagem}>Nossos serviços</h2>
         <img src="images/36.png" alt="Imagem 36" className={styles.imagem} />
         <div className={styles.containerQuadrados}>
           <div className={styles.containerItem}>
